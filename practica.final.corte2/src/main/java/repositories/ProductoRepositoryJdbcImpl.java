@@ -3,7 +3,9 @@ package repositories;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import mapping.ProductoMapper;
 import mapping.dto.ProductoDto;
+import models.Categoria;
 import models.Producto;
 
 

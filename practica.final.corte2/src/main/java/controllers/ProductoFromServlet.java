@@ -2,6 +2,12 @@ package controllers;
 
 
 
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import mapping.ProductoMapper;
 import mapping.dto.ProductoDto;
 import models.Categoria;
@@ -29,6 +35,8 @@ public class ProductoFromServlet extends HttpServlet {
         } catch (NumberFormatException e) {
             id = 0L;
         }
+        service.porId(id);
+
         Producto producto = new Producto();
         producto.setCategoria(new Categoria());
         if (id > 0) {

@@ -13,4 +13,7 @@ public class Usuario {
     private String username;
     private String password;
     private String email;
+
+    public void setId(long id) {
+    }
 }

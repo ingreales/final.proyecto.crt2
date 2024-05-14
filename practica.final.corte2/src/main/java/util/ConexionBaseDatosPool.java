@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionBaseDatosPool {
-    private static String url = "jdbc:mysql://localhost:33008/";
+    private static String url = "jdbc:mysql:vehiculos//localhost:3306/";
     private static String username = "reales";
     private static String password = "123";
     private static BasicDataSource pool;
@@ -27,6 +27,6 @@ public class ConexionBaseDatosPool {
         return pool;
     }
     public static Connection getConnection() throws SQLException{
-        return getInstance().getConnection();
+        return getInstance().getConnection;
     }
 }
