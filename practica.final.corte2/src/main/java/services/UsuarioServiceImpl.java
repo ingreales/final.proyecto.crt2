@@ -18,7 +18,8 @@ public class UsuarioServiceImpl implements UsuarioService{
         try {
             return Optional.ofNullable(usuarioRepository.porUsername(username)).filter(u -> u.password().equals(password));
         } catch (SQLException throwables) {
-            throw new org.jan.apiservlet.webapp.headers.services.ServiceJdbcException(throwables.getMessage(), throwables.getCause());
+
         }
+        throw org.jan.apiservlet.webapp.headers.services.LoginService
     }
 }

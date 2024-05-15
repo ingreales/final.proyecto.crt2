@@ -27,6 +27,6 @@ public class ConexionBaseDatosPool {
         return pool;
     }
     public static Connection getConnection() throws SQLException{
-        return getInstance().getConnection;
+        return getInstance().getConnection ();
     }
 }

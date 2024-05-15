@@ -73,7 +73,7 @@ public class ProductoServiceJdbcImpl implements ProductoService {
         try {
             return Optional.ofNullable(repositoryJdbcCategpria.porId(id));
         } catch (SQLException throwables) {
-            throw new org.ingreales.apiservlet.webapp.headers.services.ServiceJdbcException(throwables.getMessage(), throwables.getCause());
+            throw new org.jan.apiservlet.webapp.headers.services.ServiceJdbcException(throwables.getMessage(), throwables.getCause());
 
         }
     }

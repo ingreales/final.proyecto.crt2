@@ -5,10 +5,8 @@ import jakarta.inject.Named;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletResponse;
-import org.jan.apiservlet.webapp.headers.services.ServiceJdbcException;
-import org.jan.apiservlet.webapp.headers.util.ConexionBaseDatosDS;
+import services.ServiceJdbcException;
 
-import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;

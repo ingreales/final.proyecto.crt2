@@ -14,7 +14,7 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        LoginService auth = new LoginServiceSessionImpl();
+        LoginService auth = (LoginService) new LoginServiceSessionImpl();
         Optional<String> username = auth.getUsername(req);
         if (username.isPresent()) {
             HttpSession session = req.getSession();
